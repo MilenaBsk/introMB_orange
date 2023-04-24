@@ -21,3 +21,18 @@ def name(request, data):
     escaped_data = escape(data)# dzięki temu escape blokujemy/zabezpieczamy dostęp do ściezki przed hakerami i zmianami
     print(escaped_data)
     return HttpResponse(f"Hello, {escaped_data}!")
+
+def hello2(request):
+    return render(
+        request,
+        'hello.html'
+    )
+
+def name2(request, data):
+    return render(
+        request,
+        'name.html',
+        context={
+            "data":data
+        }
+    )
