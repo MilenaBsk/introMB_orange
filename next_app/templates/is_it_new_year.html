@@ -1,16 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
 </head>
 <body>
     {% if is_new_year %}
-        <span style="color: red;">{{ text }}</span>
-        <span style="color: red;">YES</span>
+        <h1 style="color: rgb(255,0,0);">YES</h1>
     {% else %}
-        <span style="color:green">{{ text }}</span>
-        <span style="color:green">NO</span>
+        <h1 style="color:green ">NO</h1>
+        <img src="{% static 'img/kotek.jpg' %}">
     {% endif %}
 </body>
+<script src="{% static 'js/script.js' %}"></script>
+
 </html>

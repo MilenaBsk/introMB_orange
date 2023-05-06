@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Komentarz -->
+{# komentarz w django #}
+        {% comment %}
+            koemntarz wielolinijkowy
+        {% endcomment %}
+
+     <ul>
+    {% for item in fruits %}
+        <li>{{ forloop.counter }} - {{ item }}</li>
+    {% endfor %}
+    </ul>
+
+    <!-- Drugi element (o indeksie 1) z listy -->
+    <p>{{ fruits.1 }}</p>
+    <!-- Wyszukiwanie (lookup) po kluczu -->
+    <!-- Wrtość pod kluczem age -->
+    <p>{{ person.age }}</p>
+
+    <!-- Wyszukiwanie (lookup) po nazwie atrybutu/metody -->
+    <!-- atrybut name -->
+    <p>{{ cow.name }}</p>
+
+    <!-- Wyszukiwanie (lookup) po indeksie -->
+    <!-- Drugi element (o indeksie 1) z listy -->
+    <p>{{ fruits.1 }}</p>
+
+    <!-- Filtry -->
+    <p>{{ fruits | length }}</p>
+    <p>{{ fruits | join:", " }}</p>
+    <p>{{ fruits | upper }}</p>
+    <p>{{ "ala" | capfirst }}</p> <!-- nie działa na liście, ale na jednym wyrazie tak -->
+    <p>{{ fruits | cut:"a" }}</p>
+
+</body>
+</html>
