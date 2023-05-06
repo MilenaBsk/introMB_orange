@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from links import views
 
-
+app_name = 'links'
 
 urlpatterns = [
     path('first/', views.first, name='first_name'),
