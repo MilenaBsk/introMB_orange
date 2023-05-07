@@ -5,5 +5,6 @@ from inheritance import views
 app_name = 'iheritance'
 
 urlpatterns = [
-    path('first/', views.first_view, name='first_name')
+    path('first/', views.first_view, name='first_name'),
+    path('second/', views.second_view, name='second_name')
 ]
