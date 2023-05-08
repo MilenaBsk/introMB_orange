@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
+    # 3-part apps
+    'django_extensions',
+
     #local apps
     'hello.apps.HelloConfig',
     'next_app.apps.NextAppConfig',
@@ -50,6 +53,8 @@ INSTALLED_APPS = [
     'form_app2.apps.FormApp2Config',
     'form_app3.apps.FormApp3Config',
     'form_app4.apps.FormApp4Config',
+    'form_app5.apps.FormApp5Config',
+
 ]
 
 MIDDLEWARE = [
@@ -87,9 +92,9 @@ WSGI_APPLICATION = "introMB.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
