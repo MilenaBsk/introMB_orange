@@ -14,6 +14,7 @@ from pathlib import Path
 
 import hello.apps
 import next_app.apps
+import relations_app.apps
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,6 +55,8 @@ INSTALLED_APPS = [
     'form_app3.apps.FormApp3Config',
     'form_app4.apps.FormApp4Config',
     'form_app5.apps.FormApp5Config',
+    'crud_app.apps.CrudAppConfig',
+    'relations_app.apps.RelationsAppConfig',
 
 ]
 
